@@ -22,4 +22,4 @@ let a = code.dijkstra(graph, sourceNode);
 let b = [9,11,0,13,8,11,9,14]; //answer from example in lecture video;
 
 //Test
-assert(arrayEqualTo(a,b));
+assert(arrayEqual(a,b));
