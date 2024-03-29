@@ -24,3 +24,7 @@ inefficient.
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+### Answer
+I have a for loop to mark all nodes as not marked, this takes V time. Then I have a for loop with another inside it. The outside loop at worst would iterate through all nodes finding the node with the lowest estimated dist, so V. THe inside loop at worst would iterate over all nodes until it finds a node not already marked, so V as well. The last for loop at worst (when all nodes are connected) would iterate over all nodes to update the estimated dist, so V. That leaves us with $V + (V * V) + V$ so big $\Theta(V^2)$
+
