@@ -9,9 +9,10 @@ function dijkstra(graph, sourceNode) {
     }
     
     dist[sourceNode] = 0; //set estimated dist to 0 for the sourceNode
-    loopNumber = 1;
+    let trueCount = 0;
+    //loopNumber = 1;
     //console.log("befoere the first loop: " + dist);
-    while (true) {
+    while (trueCount < marked.length) {
         //console.log("loop " + loopNumber);
         let lowest = 1000; //set lowest to our infinity
         let lowestIndex = 0;
@@ -27,6 +28,7 @@ function dijkstra(graph, sourceNode) {
         }
         //console.log("lowestIndex: " + lowestIndex);
         marked[lowestIndex] = true; //mark lowestIndex node
+        trueCount++;
         distance[lowestIndex] = lowest; //set distance for the lowest dist to dist
     
         //look at all the edges that leave lowestIndex and update there dist
@@ -35,23 +37,12 @@ function dijkstra(graph, sourceNode) {
                 dist[graph[lowestIndex][i][0]] = Math.min(dist[graph[lowestIndex][i][0]], distance[lowestIndex] + graph[lowestIndex][i][1]);
             }
         }
-        
         //loopNumber++;
         //console.log("dist: " + dist);
         //console.log("distance: " + distance);
-        //console.log("marked: " + marked);
-        
-        let trueCount = 0;
-        for (let i = 0; i < marked.length; i++) { //check if all nodes are marked and leave loop if so
-            if(marked[i] == true) {
-                trueCount++;
-            }
-        }
-        if (trueCount == marked.length) {
-            return distance;
-        }
+        //console.log("marked: " + marked)
     }
-    return;
+    return distance;
 }
 //graph is from example in lecture videos
 /*
@@ -67,6 +58,8 @@ graph = [ [[1,2],[2,1],[3,4]], //node A
           
 //sourceNode = 2;
 //console.log(dijkstra(graph, sourceNode))
+
+
 
 
 
