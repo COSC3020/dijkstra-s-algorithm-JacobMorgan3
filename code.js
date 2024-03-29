@@ -54,7 +54,7 @@ function dijkstra(graph, sourceNode) {
     return;
 }
 //graph is from example in lecture videos
-graph = [ [[1,2],[2,1],[3,4]], //node A
+//graph = [ [[1,2],[2,1],[3,4]], //node A
           [[2,1],[4,10],[5,2]], //node B
           [[0,9],[4,8]], //node C
           [[2,2]], //node D
@@ -64,9 +64,11 @@ graph = [ [[1,2],[2,1],[3,4]], //node A
           [[6,1]] ]; //node H
           
           
-sourceNode = 2;
-console.log(dijkstra(graph, sourceNode))
+//sourceNode = 2;
+//console.log(dijkstra(graph, sourceNode))
 
 
 
 
+//add so i can test functions
+module.exports = {dijkstra};
