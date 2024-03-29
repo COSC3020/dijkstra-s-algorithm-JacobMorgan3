@@ -31,8 +31,8 @@ function dijkstra(graph, sourceNode) {
     
         //look at all the edges that leave lowestIndex and update there dist
         for (let i = 0; i < graph[lowestIndex].length; i++) {
-            if (graph[lowest][i][1] < 1000) { //if dist is lower than 'infinity' update it
-                dist[graph[lowest][i][0]] = graph[lowest][i][1];
+            if (graph[lowestIndex][i][1] < 1000) { //if dist is lower than 'infinity' update it
+                dist[graph[lowestIndex][i][0]] = graph[lowestIndex][i][1];
             }
         }
         
@@ -65,6 +65,7 @@ graph = [ [[1,2],[2,1],[3,4]], //node A
           
 sourceNode = 2;
 console.log(dijkstra(graph, sourceNode))
+
 
 
 
