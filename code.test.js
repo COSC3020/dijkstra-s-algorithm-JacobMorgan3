@@ -18,7 +18,7 @@ graph = [ [[1,2],[2,1],[3,4]], //node A          //graph from example in lecture
 
 sourceNode = 2;
 
-let a = code.dijkstra(graph, startNode, targetNode);
+let a = code.dijkstra(graph, sourceNode);
 let b = [9,11,0,13,8,11,9,14]; //answer from example in lecture video;
 
 //Test
