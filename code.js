@@ -54,15 +54,16 @@ function dijkstra(graph, sourceNode) {
     return;
 }
 //graph is from example in lecture videos
-//graph = [[[1,2],[2,1],[3,4]], //node A
+/*
+graph = [ [[1,2],[2,1],[3,4]], //node A
           [[2,1],[4,10],[5,2]], //node B
           [[0,9],[4,8]], //node C
           [[2,2]], //node D
           [[3,7],[6,1]], //node E
           [[7,3]], //node F
           [[4,4],[5,2]], //node G
-          [[6,1]]]; //node H
-          
+          [[6,1]] ]; //node H
+*/          
           
 //sourceNode = 2;
 //console.log(dijkstra(graph, sourceNode))
