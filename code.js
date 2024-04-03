@@ -17,13 +17,9 @@ function dijkstra(graph, sourceNode) {
         let lowest = 1000; //set lowest to our infinity
         let lowestIndex = 0;
         for (let i = 0; i < dist.length; i++) { //find the node with the lowest estimated dist that is not marked
-            for (let j = 0; j < marked.length; j++) {
-                if (marked[j] == false) { //if not marked
-                    if (dist[j] < lowest) { //finding the lowest estimated dist 
-                        lowest = dist[j];
-                        lowestIndex = j;
-                    }   
-                }
+            if (marked[i] == false && dist[i] < lowest) {
+                lowest = dist[i];
+                lowestIndex = i;
             }
         }
         //console.log("lowestIndex: " + lowestIndex);
@@ -44,6 +40,8 @@ function dijkstra(graph, sourceNode) {
     }
     return distance;
 }
+
+
 //graph is from example in lecture videos
 /*
 graph = [ [[1,2],[2,1],[3,4]], //node A
