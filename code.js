@@ -4,7 +4,7 @@ function dijkstra(graph, sourceNode) {
     let distance = [];
     let marked = [];
     for (let i = 0; i < graph.length; i++) { //set all nodes esitmated dist to 1000 (which will be our infinity)
-        dist[i] = 1000;
+        dist[i] = Infinity;
         marked[i] = false;
     }
     
