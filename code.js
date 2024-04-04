@@ -14,7 +14,7 @@ function dijkstra(graph, sourceNode) {
     //console.log("befoere the first loop: " + dist);
     while (trueCount < marked.length) {
         //console.log("loop " + loopNumber);
-        let lowest = 1000; //set lowest to our infinity
+        let lowest = Infinity; //set lowest to infinity
         let lowestIndex = 0;
         for (let i = 0; i < dist.length; i++) { //find the node with the lowest estimated dist that is not marked
             if (marked[i] == false && dist[i] < lowest) {
