@@ -3,7 +3,7 @@ function dijkstra(graph, sourceNode) {
     let dist = [];
     let distance = [];
     let marked = [];
-    for (let i = 0; i < graph.length; i++) { //set all nodes esitmated dist to 1000 (which will be our infinity)
+    for (let i = 0; i < graph.length; i++) { //set all nodes esitmated dist to infinity
         dist[i] = Infinity;
         marked[i] = false;
     }
@@ -29,7 +29,7 @@ function dijkstra(graph, sourceNode) {
     
         //look at all the edges that leave lowestIndex and update there dist
         for (let i = 0; i < graph[lowestIndex].length; i++) {
-            if (graph[lowestIndex][i][1] < 1000) { //if dist is lower than 'infinity' update it
+            if (graph[lowestIndex][i][1] < 1000) { //if dist is less than infinity update it
                 dist[graph[lowestIndex][i][0]] = Math.min(dist[graph[lowestIndex][i][0]], distance[lowestIndex] + graph[lowestIndex][i][1]);
             }
         }
