@@ -26,5 +26,5 @@ What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
 ### Answer
-I have a for loop to mark all nodes as not marked and set dist to 'intinity', this takes V time. I have a while loop to iterate until all nodes are marked, this takes V time. Then I have a for loop, at worst this iterates through all nodes finding the node with the lowest estimated dist that is not marked, so V. The last for loop at worst (when all nodes are connected) would iterate over all connected edges to update the estimated dist, so E. That leaves us with $V + V(V + E)$ and E at it's worse could be $V^2$. So we get big $\Theta(V^3)$
+I have a for loop to mark all nodes as not marked and set dist to 'intinity', this takes V time. I have a while loop to iterate until all nodes are marked, this takes V time. Then I have a for loop, at worst this iterates through all nodes finding the node with the lowest estimated dist that is not marked, so V. The last for loop at worst (when all nodes are connected) would iterate over all connected edges to update the estimated dist, so E. That leaves us with $V + V(V + E)$ and E at it's worse could be $V$. So we get big $\Theta(V^2)$
 
